@@ -40,7 +40,7 @@ public interface RestService {
     //下载默认是下载到运行内存，避免这种情况，需要注解@Streaming
     @Streaming
     @GET
-    Call<ResponseBody> donload(@Url String url, @QueryMap Map<String,Object> params);
+    Call<ResponseBody> download(@Url String url, @QueryMap Map<String,Object> params);
 
     //上传
     @Multipart

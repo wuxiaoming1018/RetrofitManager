@@ -18,7 +18,7 @@ public class ProjectInit {
         return getConfigurator().getConfiguration(key);
     }
 
-    public static Context getApplication(){
+    public static Context getApplicationContext(){
         return getConfiguration(ConfigKey.APPLICATION_CONTEXT.name());
     }
 }

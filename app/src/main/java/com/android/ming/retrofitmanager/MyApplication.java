@@ -9,7 +9,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         ProjectInit.init(this)
-                .withApiHost("BaseUrl")
+                .withApiHost("http://www.kuaidi100.com/")
                 .configure();
     }
 }

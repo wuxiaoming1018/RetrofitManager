@@ -51,7 +51,7 @@ public class SaveFileTask extends AsyncTask<Object,Void,File>{
     protected void onPostExecute(File file) {
         super.onPostExecute(file);
         if (SUCCESS != null) {
-            SUCCESS.onSuccess(file.getPath());
+            SUCCESS.onSuccess(file.getPath(),file.getAbsolutePath().toString());
         }
         if (REQUEST != null) {
             REQUEST.onRequestEnd();

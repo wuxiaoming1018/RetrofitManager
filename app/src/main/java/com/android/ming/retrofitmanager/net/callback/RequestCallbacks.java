@@ -21,15 +21,16 @@ public class RequestCallbacks implements Callback<String> {
 
     @Override
     public void onResponse(Call<String> call, Response<String> response) {
+        String url = call.request().url().toString();
         if (response.isSuccessful()) {
             if (call.isExecuted()) {
                 if (SUCCESS != null) {
-                    SUCCESS.onSuccess(response.body());
+                    SUCCESS.onSuccess(response.body(),url);
                 }
             }
         }else{
             if (ERROR != null) {
-                ERROR.onError(response.code(),response.message());
+                ERROR.onError(response.code(),response.message(),url);
             }
         }
     }

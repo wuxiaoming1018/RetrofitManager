@@ -59,7 +59,7 @@ public class DownLoadHandler {
                             }
                         }else{
                             if (ERROR != null) {
-                                ERROR.onError(response.code(),response.message());
+                                ERROR.onError(response.code(),response.message(),call.request().url().toString());
                             }
                         }
                     }

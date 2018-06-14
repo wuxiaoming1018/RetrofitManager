@@ -44,6 +44,7 @@ public class Configurator {
      * @return
      */
     public <T> T getConfiguration(Object key) {
+        checkConfiguration();
         final Object value = CONFIGS.get(key);
         if (value == null) {
             throw new NullPointerException(key.toString() + "IS NULL");
